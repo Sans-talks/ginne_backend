@@ -1,0 +1,117 @@
+.auth-container {
+  min-height: calc(100vh - var(--header-height));
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #fdf7fe;
+  padding: 20px;
+}
+
+.auth-box {
+  width: 100%;
+  max-width: 400px;
+  background: #fff;
+  padding: 40px 30px;
+  box-shadow: var(--shadow-sm);
+  border-radius: 4px;
+}
+
+.auth-box h2 {
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--primary-color);
+  margin-bottom: 25px;
+  text-align: center;
+}
+
+.login-type-toggle {
+  display: flex;
+  background-color: #f5f5f6;
+  border-radius: 4px;
+  margin-bottom: 25px;
+  padding: 4px;
+}
+
+.login-type-toggle button {
+  flex: 1;
+  padding: 10px;
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--secondary-color);
+  border-radius: 4px;
+  transition: all 0.2s ease;
+}
+
+.login-type-toggle button.active {
+  background-color: #fff;
+  color: var(--accent-color);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.auth-box form {
+  display: flex;
+  flex-direction: column;
+}
+
+.auth-box input {
+  padding: 12px 15px;
+  margin-bottom: 15px;
+  border: 1px solid var(--border-color);
+  border-radius: 4px;
+  font-size: 14px;
+  color: var(--primary-color);
+  transition: border-color 0.2s;
+}
+
+.auth-box input:focus {
+  border-color: var(--primary-color);
+}
+
+.auth-box button[type="submit"] {
+  background-color: var(--accent-color);
+  color: #fff;
+  padding: 12px;
+  font-size: 14px;
+  font-weight: 700;
+  border-radius: 4px;
+  margin-top: 10px;
+  transition: background-color 0.2s;
+}
+
+.auth-box button[type="submit"]:hover {
+  background-color: #ff527b;
+}
+
+.auth-box .error {
+  color: #ff3f6c;
+  font-size: 12px;
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+.auth-box p {
+  margin-top: 25px;
+  font-size: 13px;
+  text-align: center;
+  color: var(--secondary-color);
+}
+
+.auth-link {
+  color: var(--accent-color);
+  font-weight: 700;
+  margin-left: 5px;
+}
+
+.remember-me {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 13px;
+  color: var(--secondary-color);
+  margin-bottom: 15px;
+}
+
+.remember-me input {
+  width: auto;
+  margin: 0;
+}

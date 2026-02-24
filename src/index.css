@@ -1,0 +1,55 @@
+@import url('https://fonts.googleapis.com/css2?family=Assistant:wght@300;400;600;700&display=swap');
+
+:root {
+  --primary-color: #6C4DFF;
+  /* Ginne Purple */
+  --accent-color: #6C4DFF;
+  --accent-light: #F3F0FF;
+  /* Soft Purple */
+  --secondary-color: #535766;
+  /* Deep Gray/Navy for text */
+  --bg-color: #ffffff;
+  --border-color: #eaeaec;
+  --font-main: 'Assistant', sans-serif;
+  --header-height: 80px;
+  --shadow-sm: 0 4px 12px 0 rgba(0, 0, 0, 0.05);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font-main);
+  background-color: var(--bg-color);
+  color: var(--primary-color);
+  overflow-x: hidden;
+}
+
+#root {
+  width: 100%;
+  min-height: 100vh;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul {
+  list-style: none;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  outline: none;
+  background: none;
+}
+
+input {
+  outline: none;
+  border: none;
+}
