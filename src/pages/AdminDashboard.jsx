@@ -13,7 +13,7 @@ function AdminDashboard() {
 
   const fetchProducts = async () => {
     try {
-      const response = await fetch("http://localhost:5000/api/products");
+      const response = await fetch("https://ginne-backend.onrender.com/api/products");
       const data = await response.json();
       setProducts(data);
     } catch (error) {
@@ -101,8 +101,8 @@ function AdminDashboard() {
 
     try {
       const url = editingId
-        ? `http://localhost:5000/api/products/${editingId}`
-        : "http://localhost:5000/api/products/add";
+        ? `https://ginne-backend.onrender.com/api/products/${editingId}`
+        : "https://ginne-backend.onrender.com/api/products/add";
 
       const method = editingId ? "PUT" : "POST";
 
@@ -153,7 +153,7 @@ function AdminDashboard() {
     if (!token) return alert("You must be logged in as admin.");
 
     try {
-      const response = await fetch(`http://localhost:5000/api/products/${id}`, {
+      const response = await fetch(`https://ginne-backend.onrender.com/api/products/${id}`, {
         method: "DELETE",
         headers: {
           "Authorization": `Bearer ${token}`

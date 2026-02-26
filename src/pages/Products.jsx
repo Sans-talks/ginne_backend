@@ -43,7 +43,7 @@ function Products() {
     const fetchProducts = async () => {
       setLoading(true);
       try {
-        const response = await fetch("http://localhost:5000/api/products");
+        const response = await fetch("https://ginne-backend.onrender.com/api/products");
         const data = await response.json();
 
         if (response.ok) {

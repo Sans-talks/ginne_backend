@@ -12,7 +12,7 @@ function Orders() {
       return;
     }
 
-    fetch("http://localhost:5000/api/orders", {
+    fetch("https://ginne-backend.onrender.com/api/orders", {
       headers: { Authorization: `Bearer ${token}` }
     })
       .then(res => res.json())

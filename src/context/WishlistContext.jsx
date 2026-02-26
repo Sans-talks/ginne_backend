@@ -14,7 +14,7 @@ export function WishlistProvider({ children }) {
         }
 
         try {
-            const response = await fetch("http://localhost:5000/api/wishlist", {
+            const response = await fetch("https://ginne-backend.onrender.com/api/wishlist", {
                 headers: { "Authorization": `Bearer ${token}` }
             });
             const data = await response.json();
@@ -34,7 +34,7 @@ export function WishlistProvider({ children }) {
         if (!token) return alert("Please login to manage your wishlist");
 
         try {
-            const response = await fetch("http://localhost:5000/api/wishlist/toggle", {
+            const response = await fetch("https://ginne-backend.onrender.com/api/wishlist/toggle", {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json",

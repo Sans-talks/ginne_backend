@@ -9,7 +9,7 @@ function AdminProducts() {
 
   // ✅ Fetch all products
   useEffect(() => {
-    fetch("http://localhost:5000/api/products", {
+    fetch("https://ginne-backend.onrender.com/api/products", {
       headers: {
         Authorization: `Bearer ${token}`,
       },
@@ -24,7 +24,7 @@ function AdminProducts() {
     if (!window.confirm("Delete this product?")) return;
 
     try {
-      await fetch(`http://localhost:5000/api/products/${id}`, {
+      await fetch(`https://ginne-backend.onrender.com/api/products/${id}`, {
         method: "DELETE",
         headers: {
           Authorization: `Bearer ${token}`,

@@ -14,10 +14,22 @@ connectDB();
 
 const app = express();
 
-app.use(cors({
-  origin: ["http://localhost:5173", "http://localhost:3000", "http://localhost:5174"],
-  credentials: true
-}));
+// CORS configuration
+const FRONTEND_ORIGIN = "https://ginne-frontend-rjm2il6hh-sans-talks-projects.vercel.app";
+// Toggle for testing: set CORS_ALLOW_ALL=true in env to allow any origin temporarily
+const allowAll = process.env.CORS_ALLOW_ALL === "true";
+
+const corsOptions = {
+  origin: allowAll ? true : FRONTEND_ORIGIN,
+  credentials: true,
+  methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
+  allowedHeaders: ["Content-Type", "Authorization"],
+  optionsSuccessStatus: 204
+};
+
+app.use(cors(corsOptions));
+// Ensure preflight requests are handled for all routes
+app.options("*", cors(corsOptions));
 app.use(express.json());
 app.use("/uploads", express.static("uploads"));
 

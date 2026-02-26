@@ -25,7 +25,7 @@ export function CartProvider({ children }) {
     }
 
     try {
-      const response = await fetch("http://localhost:5000/api/cart", {
+      const response = await fetch("https://ginne-backend.onrender.com/api/cart", {
         headers: { "Authorization": `Bearer ${token}` }
       });
       const data = await response.json();
@@ -46,7 +46,7 @@ export function CartProvider({ children }) {
     if (!token) return alert("Please login to add items to cart");
 
     try {
-      const response = await fetch("http://localhost:5000/api/cart", {
+      const response = await fetch("https://ginne-backend.onrender.com/api/cart", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -70,7 +70,7 @@ export function CartProvider({ children }) {
     if (!token) return;
 
     try {
-      const response = await fetch(`http://localhost:5000/api/cart/${itemId}`, {
+      const response = await fetch(`https://ginne-backend.onrender.com/api/cart/${itemId}`, {
         method: "PUT",
         headers: {
           "Content-Type": "application/json",
@@ -92,7 +92,7 @@ export function CartProvider({ children }) {
     if (!token) return;
 
     try {
-      const response = await fetch(`http://localhost:5000/api/cart/${itemId}`, {
+      const response = await fetch(`https://ginne-backend.onrender.com/api/cart/${itemId}`, {
         method: "DELETE",
         headers: { "Authorization": `Bearer ${token}` }
       });
