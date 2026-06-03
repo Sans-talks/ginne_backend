@@ -15,7 +15,7 @@ connectDB();
 const app = express();
 
 // CORS configuration
-const FRONTEND_ORIGIN = "https://ginne-frontend-rjm2il6hh-sans-talks-projects.vercel.app";
+const FRONTEND_ORIGIN = "https://ginne-frontend.onrender.com";
 // Toggle for testing: set CORS_ALLOW_ALL=true in env to allow any origin temporarily
 const allowAll = process.env.CORS_ALLOW_ALL === "true";
 
